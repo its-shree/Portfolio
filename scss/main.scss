@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 
 html{
     font-size: 10px;    //default is 16px
@@ -60,7 +61,7 @@ main{
 
             &:hover{    //same as a:hover{}
             color: $secondary-color;
-            @include easeOut();
+            @include easeOut;
             }
         }
     }
