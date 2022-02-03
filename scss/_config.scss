@@ -1,0 +1,30 @@
+$primary-color: #444;
+$secondary-color:#eece1a;
+$show-home-image:true;
+$home-image:url(../img/background.jpg);   //double dots bcz we want to go outside of scss folder
+$background-opacity: 0.9;
+
+@mixin easeOut {    //i u want to add this transition anywhere just write @include easeOut(); 
+    transition: all 0.5s ease-out;
+}
+
+@mixin background{
+    @if $show-home-image {  //if bg img is true
+        &#bg-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after{    //instead of using overlay we can use after pseuodo selector
+                content: '';
+                position: absolute; //we want to cover whole area
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;// to send overlay back to text i.e. text will be closure to you
+                background:rgba($primary-color,$background-opacity);    //without rgba we can't see through text
+            }
+        }
+    }
+}
