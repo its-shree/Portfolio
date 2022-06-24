@@ -1,18 +1,19 @@
 @import 'config';
 @import 'menu';
+@import 'mobile';
 
-html{
-    font-size: 10px;    //default is 16px
+html {
+    font-size: 10px; //default is 16px
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
 body {
     @include background;
     background: $primary-color;
-    color:#fff;
+    color: #fff;
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -20,55 +21,62 @@ body {
 }
 
 //Headings
-h1, h2, h3{
+h1,
+h2,
+h3 {
     margin: 0;
     font-weight: 400;
-    &.lg-heading{       // we want h1 has lg-heading as it's own class not nested within it, same as h1.lg-heading
+
+    &.lg-heading {
+        // we want h1 has lg-heading as it's own class not nested within it, same as h1.lg-heading
         font-size: 6rem;
     }
 
-    &.sm-heading{
+    &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color,2),0.5);    //sass has lighten function to lighten the color, rgba function is used so that we can see through lighten background (opacity)
+        background: rgba(lighten($primary-color, 2), 0.5); //sass has lighten function to lighten the color, rgba function is used so that we can see through lighten background (opacity)
     }
 }
 
-a{
+a {
     color: #fff;
     text-decoration: none;
 }
 
-header{
+header {
     position: fixed;
     z-index: 2;
     width: 100%
 }
 
-.text-secondary{
+.text-secondary {
     color: $secondary-color;
 }
 
-main{
+main {
     padding: 4rem;
     height: 100%;
 
-    .icons{
+    .icons {
         margin-top: 1rem;
 
-        a{
+        a {
             padding: 0.4rem;
 
-            &:hover{    //same as a:hover{}
-            color: $secondary-color;
-            @include easeOut;
+            &:hover {
+                //same as a:hover{}
+                color: $secondary-color;
+                @include easeOut;
             }
         }
     }
-    &#home{
-        overflow: hidden;   //no scroll bar ever on the home page
-        h1{
-            margin-top: 20vh;   //vh is an viewport height, it sees height as 100 slices across and 20vh gonna take 20 slices // vw- viewport width
+
+    &#home {
+        overflow: hidden; //no scroll bar ever on the home page
+
+        h1 {
+            margin-top: 20vh; //vh is an viewport height, it sees height as 100 slices across and 20vh gonna take 20 slices // vw- viewport width
         }
 
     }

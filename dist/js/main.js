@@ -7,7 +7,7 @@ const navItems = document.querySelectorAll('.nav-item');   //querySelectorAll to
 
 //Set Initial State Of Menu
 
-let showMenu = false;   // we want menu to be closed by default and 'let' is used so thaat we can change its value whenever we want 
+let showMenu = false;   // we want menu to be closed by default and 'let' is used so that we can change its value whenever we want 
 
 menuBtn.addEventListener('click', toggleMenu);
 
